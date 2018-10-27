@@ -1,12 +1,11 @@
-// var mongoose=require('mongoose');
+var mongoose=require('mongoose');
 
-// var managementSchema =new mongoose.Schema(
-//     {
+var managementSchema =new mongoose.Schema(
+    {
+        mangID={type:Number,required:true},
+        posts={type:String},
+        member : { type: Schema.Types.ObjectId, ref: 'Member' }
+    }
+);
 
-//         //have to include member ID
-//         mangID={type:Number,required:true},
-//         posts={type:String}
-//     }
-// );
-
-// mongoose.model("Management",managementSchema);
+mongoose.model("Management",managementSchema);
